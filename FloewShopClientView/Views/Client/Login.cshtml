@@ -1,0 +1,42 @@
+﻿@model FloewShopClientView.Models.LoginModel
+
+
+<link rel="stylesheet" href="~/css/loginn.css" />
+<link rel="stylesheet" href="~/css/mySite.css" />
+<div class="text-left text-info">
+    <h1>@ViewData["Title"]</h1>
+</div>
+@{
+    ViewData["Title"] = "Авторизация";
+}
+@using (Html.BeginForm())
+{
+    <div class="containerSignIn">
+        <h2>Вход</h2>
+        Почта:
+        @Html.EditorFor(x => x.Email, new
+        {
+            htmlAttributes = new { @class = "input1" }
+        })
+        <br />
+        <span asp-validation-for="Email"></span><br><br />
+        Пароль:<br>
+        @Html.EditorFor(x => x.Password, new
+        {
+            htmlAttributes = new
+            {
+                @class =
+        "input2"
+            }
+        })
+        <br />
+        <span asp-validation-for="Password"></span><br>
+        @Html.ValidationSummary(true, "", new { @style = "color: black" })
+    </div>
+    <button class="btn1" type="submit">Войти</button>
+    <button class="btn2" asp-area="" asp-controller="Email" asp-action="ForgotPassword">Забыли пароль</button>
+
+}
+
+
+

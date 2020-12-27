@@ -1,0 +1,41 @@
+﻿.containerForgot {
+    background-color: #FAE39D;
+    border-radius: 20px;
+    border: 1.5px solid #17040B;
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    text-align: center;
+}
+.btn1 {
+    position: absolute;
+    outline: none;
+    left: 70px;
+    top: 220px;
+    background: #F1882B;
+    border: 1px solid #17040B;
+    border-radius: 20px;
+    text-align: center;
+    color: #17040B;
+    width: 215px;
+    height: 35px;
+    z-index: 999;
+}
+
+.btn1:hover {
+    background: #eead73;
+    color: #17040B;
+    transition: .3s ease-in-out;
+}
+
+.inputmail {
+    outline: none;
+    background: #FFFFFF;
+    border: 1px solid #17040B;
+    border-radius: 30px;
+    width: 300px;
+    height: 33px;
+}
+

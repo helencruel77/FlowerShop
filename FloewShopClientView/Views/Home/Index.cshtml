@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Цветочная Мастреская";
+}
+
+@{
+    if (Program.Client == null)
+    {
+        <div class="text-center"> <h2 class="display-4">Добро пожаловать в Цветочную Мастерскую!</h2> </div>
+        
+    }
+    else
+    {
+        <div class="text-center"> <h2 class="display-4">Мы рады видеть Вас снова!</h2></div>
+        
+    }
+}

@@ -1,0 +1,31 @@
+﻿@{ ViewData["Title"] = "Личный кабинет"; }
+<link rel="stylesheet" href="~/css/personall.css" />
+@using (Html.BeginForm())
+{
+    <div class="containerPersonal">
+        <h2>Личный кабинет</h2>
+        <p>
+            Имя: @ViewBag.User.ClientFIO<br>
+            Логин: @ViewBag.User.Email<br>
+        </p><br /><br />
+        <button class="btn1" asp-area="" asp-controller="Client" asp-action="ChangePassword">Изменить пароль</button>
+
+        <p id="mailReport">
+            Получить список оформленных <br /> заказов на почту <br />
+        </p><br /><br /><br />
+        @Html.ValidationSummary(true, "", new { @style = "color: black" })
+        <button class="btn2" id="butId" asp-area="" asp-controller="Report" asp-action="Report">Получить</button>
+        <label id="labId"></label>
+    </div>
+}
+    <script>
+        document.getElementById("butId").onclick = function () { setValue() };
+        const setValue = () => {
+            document.getElementById("labId").innerHTML = '..Идет отправка..';
+        }
+    </script>
+
+
+
+
+

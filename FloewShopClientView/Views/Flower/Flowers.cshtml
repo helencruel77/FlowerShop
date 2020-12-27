@@ -1,0 +1,23 @@
+﻿@{ ViewData["Title"] = "Цветы"; }
+
+<link rel="stylesheet" href="~/css/flowers.css" />
+<h2>Доступные цветы</h2>
+<table>
+    <thead>
+        <tr>
+            <td><h5>Название цветов</h5></td>
+            <td><h5>Цена</h5></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var flower in ViewBag.Flowers)
+        {
+            <tr>
+                <td><h5 style="margin: 0">@flower.FlowerName</h5></td>
+                <td><h5 style="margin: 0">@flower.Price</h5></td>
+            </tr>
+        }
+    </tbody>
+    
+</table>
+

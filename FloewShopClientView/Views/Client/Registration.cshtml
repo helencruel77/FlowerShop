@@ -1,0 +1,35 @@
+﻿@model FloewShopClientView.Models.RegistrationModel
+
+@{
+    ViewData["Title"] = "Регистрация";
+}
+<div class="text-left text-info">
+    <link rel="stylesheet" href="~/css/regestration.css" />
+    <link rel="stylesheet" href="~/css/mySite.css" />
+</div>
+@using (Html.BeginForm("Registration", "Client"))
+{
+    <div class="containerSignUp">
+        <h2>Регистрация</h2>
+        Email: <br>
+        @Html.EditorFor(x => x.Email, new
+   {
+       htmlAttributes = new { @class = "input1" }
+   })<br>
+        <span asp-validation-for="Email"></span><br>
+        Пароль:<br>
+        @Html.EditorFor(x => x.Password, new
+   {
+       htmlAttributes = new { @class = "input2" }
+   })<br>
+        <span asp-validation-for="Password"></span><br>
+        ФИО:<br>
+        @Html.EditorFor(x => x.ClientFIO, new
+   {
+       htmlAttributes = new { @class = "input3" }
+   })<br>
+        <span asp-validation-for="ClientFIO"></span><br>
+        @Html.ValidationSummary(true, "", new { @style = "color: green" })
+        <input type="submit" value="Зарегистрироваться" class="btn1" />
+    </div>
+}

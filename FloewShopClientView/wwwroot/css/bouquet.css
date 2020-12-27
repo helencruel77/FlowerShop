@@ -1,0 +1,75 @@
+.create {
+    background-color: #FAE39D;
+    border-radius: 20px;
+    border: 1.5px solid #17040B;
+    width: 350px;
+    height: 150px;
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    font-family: 'Open Sans Regular';
+}
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('~/ofont.ru_Open Sans.ttf');
+}
+
+h5 {
+    font-family: 'Open Sans Regular';
+    color: #17040B;
+    font-size: medium;
+}
+.btn1 {
+    position: absolute;
+    left: 115px;
+    background: #F1882B;
+    border: 1px solid #17040B;
+    border-radius: 20px;
+    text-align: center;
+    color: #17040B;
+    outline: none;
+    width: 120px;
+    height: 35px;
+    z-index: 999;
+}
+
+.btn1:hover {
+    background: #eead73;
+    color: #17040B;
+    transition: .3s ease-in-out;
+}
+
+table {
+    width: 80%;
+    border-collapse: separate;
+    border-spacing: 6px;
+    top:260px;
+    position:absolute;
+    z-index:800;
+    text-align:center;
+
+}
+
+    table thead tr {
+        color: #17040B;
+        font-weight: bold;
+    }
+
+        table thead tr td {
+            border-radius: 20px;
+            border: 1.5px solid #17040B;
+            background: #F1882B;
+        }
+
+    table tbody tr td {
+        border-radius: 20px;
+        border: 1.5px solid #17040B;
+        background: #FAE39D;
+        color: #17040B;
+        text-align:center;
+    }
+
+        table tbody tr td:hover {
+            background: #eead73;
+            transition-duration: 0.2s;
+        }

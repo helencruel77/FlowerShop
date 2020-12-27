@@ -1,0 +1,81 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#img{
+    position:fixed;
+    width:103%;
+    left:0;
+    bottom:0;
+}
+#footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0;
+    bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    width: 100%;
+    background: #FAE39D;
+    color: #4f4232;
+}
+ul li {
+    display: inline;
+    text-align: center;
+}
+ul {
+    top:0;
+    margin-top: 0;
+    background-color: #FAE39D;
+}
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('~/ofont.ru_Open Sans.ttf');
+}
+h2 {
+    text-align: center;
+    font-size:200%;
+    font-family: 'Open Sans Regular';
+}
+a {
+    font-family: 'Open Sans Regular';
+    font-size: 130%;
+    display: inline-block;
+    width: 16%;
+    padding: .80rem 0;
+    margin: 0;
+    text-decoration: none;
+    color: #17040B;
+}
+.one:hover ~ hr {
+    margin-left: 16.35%;
+
+}
+.two:hover ~ hr {
+    margin-left: 32.8%;
+}
+
+.three:hover ~ hr {
+    margin-left: 49.18%;
+}
+
+.four:hover ~ hr {
+    margin-left: 65.55%;
+}
+
+.five:hover ~ hr {
+    margin-left: 81.93%;
+}
+
+hr {
+    height: .25rem;
+    width: 16%;
+    margin: 0;
+    border : none;
+    background-color: #F1882B;
+    transition: .3s ease-in-out;
+}

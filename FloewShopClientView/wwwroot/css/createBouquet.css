@@ -1,0 +1,74 @@
+.containerCreate {
+    background-color: #FAE39D;
+    border-radius: 20px;
+    border: 1.5px solid #17040B;
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    z-index: 999;
+}
+.btn1 {
+    position: absolute;
+    left: 100px;
+    top: 190px;
+    background: #F1882B;
+    border: 1px solid #17040B;
+    border-radius: 20px;
+    text-align: center;
+    color: #17040B;
+    outline: none;
+    width: 120px;
+    height: 35px;
+    z-index: 999;
+}
+
+.btn1:hover {
+    background: #eead73;
+    color: #17040B;
+    transition: .3s ease-in-out;
+}
+
+
+.input1 {
+    background: #FFFFFF;
+    border: 1px solid #17040B;
+    border-radius: 30px;
+    width: 300px;
+    height: 33px;
+    outline: none;
+    z-index: 999;
+}
+table {
+    position: relative;
+    padding: 260px 0 0;
+    border-collapse: separate;
+    border-spacing: 6px;
+    z-index: 800;
+}
+
+    table thead tr {
+        color: #17040B;
+        font-weight: bold;
+    }
+
+        table thead tr td {
+            border-radius: 20px;
+            border: 1.5px solid #17040B;
+            background: #F1882B;
+        }
+
+    table tbody tr td {
+        border-radius: 20px;
+        border: 1.5px solid #17040B;
+        background: #FAE39D;
+        color: #17040B;
+        text-align: center;
+    }
+
+        table tbody tr td:hover {
+            background: #eead73;
+            transition-duration: 0.2s;
+        }
+

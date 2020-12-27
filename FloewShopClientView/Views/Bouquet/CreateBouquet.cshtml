@@ -1,0 +1,59 @@
+﻿@{ ViewData["Title"] = "Создание букета"; }
+<!DOCTYPE html>
+<link rel="stylesheet" href="~/css/createBouquet.css" />
+<html>
+<body>
+    @using (Html.BeginForm("CreateBouquet", "Bouquet", FormMethod.Post))
+    {
+        <div class="containerCreate">
+            <h2>Создание букета</h2>
+            <p>Название букета:</p>
+            <input class="input1" type="text" name="BouquetName" readonly value="@ViewBag.BouquetName" /> <br />
+            @Html.ValidationSummary(true, "", new { @style = "color: black" })<br />
+            <p> <button type="submit" class="btn1">Создать</button></p>
+            <br />
+        </div>
+        <table class="table" style="float: left; width:50%">
+            <thead>
+                <tr>
+                    <td><h5>Цветы</h5></td>
+                    <td><h5>Цена</h5></td>
+                    <td><h5>Выберите количество</h5></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (BusinessLogic.ViewModels.FlowerViewModel flower in ViewBag.FlowerBouquets)
+                {
+                    <tr>
+                        <td>@flower.FlowerName</td>
+                        <td>@flower.Price</td>
+                        <td><input type="number" style="z-index: 999;" id="Flowers" name="Model.FlowerBouquets[@flower.Id]" value="0" min="0" /></td>
+                    </tr>
+                }
+                </tbody>
+        </table>
+        <table class="table" style="width:50%">
+            <thead>
+                <tr>
+                    <td><h5>Упаковка</h5></td>
+                    <td><h5>Цена</h5></td>
+                    <td><h5>Выберите количество</h5></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (BusinessLogic.ViewModels.PackagingViewModel pack in ViewBag.PackagingBouquets)
+                {
+                    <tr>
+                        <td>@pack.PackagingName</td>
+                        <td>@pack.Price</td>
+                        <td><input type="number" name="Model.PackagingBouquets[@pack.Id]" value="0" min="0" /></td>
+                    </tr>
+
+                }
+                </tbody>
+        </table>
+
+            }
+
+    </body>
+</html>

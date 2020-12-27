@@ -1,0 +1,49 @@
+
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('~/ofont.ru_Open Sans.ttf');
+}
+h2 {
+    font-family: 'Open Sans Regular';
+    color: #17040B;
+    text-align:center;
+}
+h5 {
+    font-family: 'Open Sans Regular';
+    color: #17040B;
+    font-size:medium;
+    
+}
+
+table {
+    width: 80%;
+    border-collapse: separate;
+    border-spacing: 6px;
+    z-index: 800;
+    text-align: center;
+    position: relative;
+}
+
+    table thead tr {
+        color: #17040B;
+        font-weight: bold;
+    }
+
+        table thead tr td {
+            border-radius: 20px;
+            border: 1.5px solid #17040B;
+            background: #F1882B;
+        }
+
+    table tbody tr td {
+        border-radius: 20px;
+        border: 1.5px solid #17040B;
+        background: #FAE39D;
+        color: #17040B;
+        text-align:center;
+    }
+
+        table tbody tr td:hover {
+            background: #eead73;
+            transition-duration: 0.2s;
+        }

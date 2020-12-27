@@ -1,0 +1,32 @@
+﻿@{ ViewData["Title"] = "Букеты"; }
+<!DOCTYPE html>
+
+    <link rel="stylesheet" href="~/css/bouquet.css" />
+
+@using (Html.BeginForm())
+{
+    <div class="create">
+        <h2 style="margin:10px">Букеты</h2>
+        @Html.ValidationSummary(true, "", new { @style = "color: black" })
+        <button class="btn1" asp-area="" asp-controller="bouquet" asp-action="BouquetName">Создать букет</button>
+    </div>
+        <table>
+            <thead>
+                <tr>
+                    <td><h5>Название букета</h5></td>
+                    <td><h5>Цена</h5></td>
+                    <td><h5>Купить</h5></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var elem in ViewBag.Bouquets)
+                {
+                    <tr>
+                        <td><h5 style="margin:0">@elem.BouquetName</h5></td>
+                        <td><h5 style="margin:0">@elem.Price</h5></td>
+                        <td><h5 style="margin:0"><a style="padding:0" href="/Order/Order/@elem.Id">Купить</a></h5></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+}

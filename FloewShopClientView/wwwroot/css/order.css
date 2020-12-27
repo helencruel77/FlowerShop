@@ -1,0 +1,61 @@
+﻿.containerOrder {
+    background-color: #FAE39D;
+    border-radius: 20px;
+    border: 1.5px solid #17040B;
+    width: 350px;
+    height: 430px;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    text-align: center;
+    z-index:999;
+}
+.btn1 {
+    position: absolute;
+    left: 110px;
+    top: 370px;
+    background: #F1882B;
+    border: 1px solid #17040B;
+    border-radius: 20px;
+    text-align: center;
+    color: #17040B;
+    outline: none;
+    width: 140px;
+    height: 35px;
+    z-index: 999;
+}
+
+.btn1:hover {
+    background: #eead73;
+    color: #17040B;
+    transition: .3s ease-in-out;
+}
+
+.input1 {
+    background: #FFFFFF;
+    border: 1px solid #17040B;
+    border-radius: 30px;
+    width: 300px;
+    height: 33px;
+    outline: none;
+    z-index: 999;
+}
+
+.input2 {
+    background: #FFFFFF;
+    border: 1px solid #17040B;
+    border-radius: 30px;
+    width: 300px;
+    height: 33px;
+    outline: none;
+    z-index: 999;
+}
+.input3 {
+    background: #FFFFFF;
+    border: 1px solid #17040B;
+    border-radius: 30px;
+    width: 300px;
+    height: 33px;
+    outline: none;
+    z-index: 999;
+}

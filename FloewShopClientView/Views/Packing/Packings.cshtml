@@ -1,0 +1,23 @@
+﻿@{ ViewData["Title"] = "Упаковки"; }
+
+<link rel="stylesheet" href="~/css/packings.css" />
+<h2>Доступные упаковки</h2>
+<table >
+    <thead>
+        <tr>
+            <td><h5>Название упаковки</h5></td>
+            <td><h5>Цена</h5></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pack in ViewBag.Packings)
+        {
+            <tr>
+                <td><h5 style="margin: 0">@pack.PackagingName</h5></td>
+                <td><h5 style="margin: 0">@pack.Price</h5></td>
+            </tr>
+        }
+    </tbody>
+    
+</table>
+

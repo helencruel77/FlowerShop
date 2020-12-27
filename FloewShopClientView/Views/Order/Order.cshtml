@@ -1,0 +1,49 @@
+﻿@model FloewShopClientView.Models.OrderModel
+@using BusinessLogic.Enums
+@{ ViewData["Title"] = "Оформление заказа"; }
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="~/css/order.css" />
+<html>
+<body>
+    <form method="post" action="">
+        <input type="hidden" name="BouquetId" value="@ViewBag.Id" />
+        <div class="containerOrder">
+            <h2>Оформление заказа</h2>
+            <h3>Букет: @ViewBag.BouquetName</h3>
+            <h3>Цена: @ViewBag.Price</h3>
+            <p>
+                Количество: <br>
+                @Html.EditorFor(x => x.Count, new { type = "number", min = "0", step = "1",
+               htmlAttributes = new { @class = "input1" }})
+                <span asp-validation-for="Count"></span><br>
+                Способ доставки: <br>
+                <select class="input2" asp-for="DeliveryType" asp-items="@new SelectList(Enum.GetNames(typeof(DeliveryType)))"></select> <br>
+                Цена: <br />
+                <input  class="input3" type="text" id="Price" readonly name="Price" value="@ViewBag.Price" />
+                <script>
+                document.getElementById("Count").onchange = function () { setValue() };
+                const setValue = () => {
+                     let value = parseInt(document.getElementById("Count").value);
+                     if (!Number.isInteger(value)) {
+                         value = 1;
+                     }
+                     document.getElementById("Price").value = value * @ViewBag.Price;
+                }
+                </script>
+            </p>
+            @Html.ValidationSummary(true, "", new { @style = "color: black" })
+            @{
+                if (@ViewBag.Id == null)
+                {
+                    <button class="btn1" asp-area="" asp-controller="Home" asp-action="Index">На главную</button>
+                }
+                else
+                {
+                    <button type="submit" class="btn1">Создать</button>
+                }
+            }
+            </div>
+    </form>
+</body>
+</html>

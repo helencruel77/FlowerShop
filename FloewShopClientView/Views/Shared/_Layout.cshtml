@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Цветочная Мастерская</title>
+    <link rel="stylesheet" href="~/css/mySite.css" />
+    <link rel="icon" href="~/fav.ico" type="image/x-icon" />
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul>
+                <li><a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/log.png" width="150" /></a></li>
+                @if (Program.Client != null)
+                {
+                    <li class="one">
+                        <a asp-area="" asp-controller="Client" asp-action="Personal">Личный кабинет</a>
+                    </li>
+                    <li class="two">
+                        <a asp-area="" asp-controller="Bouquet" asp-action="Bouquet">Букеты</a>
+                    </li>
+                    <li class="three">
+                        <a asp-area="" asp-controller="Flower" asp-action="Flowers">Цветы</a>
+                    </li>
+                    <li class="four">
+                        <a asp-area="" asp-controller="Packing" asp-action="Packings">Упаковки</a>
+                    </li>
+                    <li class="five">
+                        <a asp-area="" asp-controller="Client" asp-action="Logout" onclick="javascript:
+                        return confirm('Вы действительно хотите выйти?')">Выход</a>
+                    </li>
+                    <hr />
+                }
+                else
+                {
+                    <li class="one">
+                        <a asp-area="" asp-controller="Client" asp-action="Login">Вход</a>
+                    </li>
+                    <li class="two">
+                        <a asp-area="" asp-controller="Client" asp-action="Registration">Регистрация</a>
+                    </li>
+                    <hr />
+                }
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <img src="~/flowers.svg" id="img" />
+    <footer id="footer">
+        &copy; 2020 - FloewShopClientView
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
